@@ -364,4 +364,23 @@ https://github.com/msnigdha07/RL_Project
 
 **Main Notebook:** `final_results.ipynb`
 
+## 13. Additional Notebook – 24-Task Kaggle Version
+
+The repository also includes `24tasks_kaggleversion.ipynb`, an expanded version of the project designed to run on Kaggle GPU.
+
+Unlike the four-task pilot notebook, this version:
+
+- Uses **24 HumanEval programming tasks**.
+- Runs experiments with three random seeds: 17, 42, and 73.
+- Uses four generations per prompt during GRPO training.
+- Generates eight challenge tests per task using boundary, local, scale, and structure-based mutations.
+- Implements E1–E6 experiment configurations, including BAGR component ablations.
+- Saves optimizer checkpoints and audits actual LoRA parameter updates.
+- Evaluates generated programs independently using the official HumanEval+ evaluator.
+- Reports mean and standard deviation across seeds, along with paired method comparisons.
+
+**Execution:** Open `24tasks_kaggleversion.ipynb` in Kaggle, enable a GPU accelerator, and execute the notebook cells in order. Results are saved under `/kaggle/working/BAGR_project_results/`.
+
+This notebook provides a broader, multi-seed experimental evaluation alongside the original four-task pilot implementation.
+
 ---
